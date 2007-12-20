@@ -16,6 +16,7 @@ Buildrequires:	perl(Module::Build)
 Buildrequires:	perl(ExtUtils::CBuilder)
 Buildrequires:	perl(ExtUtils::XSBuilder)
 Buildrequires:	imlib2-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Image::Imlib2 is a Perl port of Imlib2, a graphics library that does image file
