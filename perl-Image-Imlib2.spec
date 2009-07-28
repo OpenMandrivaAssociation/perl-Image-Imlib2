@@ -1,22 +1,22 @@
-%define module	Image-Imlib2
-%define name	perl-%{module}
-%define version 2.02
-%define release %mkrel 1
+%define upstream_name	 Image-Imlib2
+%define upstream_version 2.02
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		perl-%{upstream_name}
+Version:	%{upstream_version}
+Release:	%mkrel 1
+
 Summary:	Interface to the Imlib2 image library
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:		http://www.cpan.org/modules/by-module/Image/%{module}-%{version}.tar.bz2
-Buildrequires:	perl-devel
+URL:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Image/%{upstream_name}-%{upstream_version}.tar.bz2
+
+Buildrequires:	imlib2-devel
 Buildrequires:	perl(Module::Build)
 Buildrequires:	perl(ExtUtils::CBuilder)
 Buildrequires:	perl(ExtUtils::XSBuilder)
-Buildrequires:	imlib2-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+Buildrequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Image::Imlib2 is a Perl port of Imlib2, a graphics library that does image file
@@ -34,7 +34,7 @@ a great deal of functionality already exists. If you think the API can be
 tweaked to be a bit more intuitive, drop me a line!
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Build.PL installdirs=vendor
@@ -54,5 +54,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/auto/Image
 %{perl_vendorarch}/Image
 %{_mandir}/*/*
-
-
