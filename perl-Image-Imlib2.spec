@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%{upstream_version}
-Release:	%mkrel 1
+Release:	%mkrel 2
 
 Summary:	Interface to the Imlib2 image library
 License:	GPL+ or Artistic
