@@ -1,22 +1,21 @@
-%define upstream_name	 Image-Imlib2
+%define upstream_name    Image-Imlib2
 %define upstream_version 2.02
 
-Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	%mkrel 2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+Summary:    Interface to the Imlib2 image library
+License:    GPL+ or Artistic
+Group:      Development/Perl
+URL:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Image/%{upstream_name}-%{upstream_version}.tar.bz2
 
-Summary:	Interface to the Imlib2 image library
-License:	GPL+ or Artistic
-Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Image/%{upstream_name}-%{upstream_version}.tar.bz2
-
-Buildrequires:	imlib2-devel
-Buildrequires:	perl(Module::Build)
-Buildrequires:	perl(ExtUtils::CBuilder)
-Buildrequires:	perl(ExtUtils::XSBuilder)
-Buildrequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+Buildrequires:  imlib2-devel
+Buildrequires:  perl(Module::Build)
+Buildrequires:  perl(ExtUtils::CBuilder)
+Buildrequires:  perl(ExtUtils::XSBuilder)
+Buildrequires:  perl-devel
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Image::Imlib2 is a Perl port of Imlib2, a graphics library that does image file
