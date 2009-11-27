@@ -1,14 +1,15 @@
 %define upstream_name    Image-Imlib2
-%define upstream_version 2.02
+%define upstream_version 2.03
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
 Release:    %mkrel 1
+
 Summary:    Interface to the Imlib2 image library
 License:    GPL+ or Artistic
 Group:      Development/Perl
 URL:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Image/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:    http://www.cpan.org/modules/by-module/Image/%{upstream_name}-%{upstream_version}.tar.gz
 
 Buildrequires:  imlib2-devel
 Buildrequires:  perl(Module::Build)
