@@ -8,7 +8,7 @@ Release:	4
 Summary:    Interface to the Imlib2 image library
 License:    GPL+ or Artistic
 Group:      Development/Perl
-URL:        http://search.cpan.org/dist/%{upstream_name}
+URL:        https://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Image/%{upstream_name}-%{upstream_version}.tar.gz
 
 Buildrequires:  imlib2-devel
